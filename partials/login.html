@@ -1,6 +1,7 @@
 <html>
-    <head>
-        Node Sample
+
+<head>
+    Node Sample
     <script>
         function login() {
             var login = {};
@@ -10,22 +11,31 @@
             xhttp.open("POST", "/login", true);
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send(JSON.stringify(login));
-            console.log(xhttp);
+            xhttp.onload = function() {
+                var xhttpGet = new XMLHttpRequest();
+                xhttpGet.open("GET", "/home", true);
+                xhttpGet.setRequestHeader("Content-type", "application/json");
+                console.log(JSON.parse(xhttp.response).token);
+                xhttpGet.setRequestHeader("token", JSON.parse(xhttp.response).token);
+                xhttpGet.send();
+            };
         }
+
     </script>
-    </head>
-   
-    <body>
-        <form name="LoginForm">
-            <div>
+</head>
+
+<body>
+    <form name="LoginForm">
+        <div>
             <label>User Name</label>
             <input type="text" id="username" value="test">
-            </div>
-             <label>Password</label>
-            <input type="password" id="password" value="test">
-            <div>
-            </div>
-            <input type="button" onclick="login()" value="login"/> 
-        </form>
-    </body>
+        </div>
+        <label>Password</label>
+        <input type="password" id="password" value="test">
+        <div>
+        </div>
+        <input type="button" onclick="login()" value="login" />
+    </form>
+</body>
+
 </html>
