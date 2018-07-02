@@ -1,18 +1,17 @@
 {
-  "name": "nodesample",
-  "version": "0.0.1",
-  "description": "learining node js",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Aravinth",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "fs": "0.0.1-security",
-    "jsonwebtoken": "^8.3.0"
-  }
+    "name": "nodesample",
+    "version": "0.0.1",
+    "description": "learining node js",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Aravinth",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "fs": "0.0.1-security",
+        "jsonwebtoken": "^8.3.0"
+    }
 }

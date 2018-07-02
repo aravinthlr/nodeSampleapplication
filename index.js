@@ -3,6 +3,7 @@ const app = express();
 const secretPassword = 'MR.Secret';
 const fileSystem = require('fs');
 const bodyParser = require("body-parser"); // Body parser for fetch posted data
+//https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52
 const jwt = require('jsonwebtoken');
 
 app.use(bodyParser.urlencoded({
