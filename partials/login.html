@@ -1,0 +1,31 @@
+<html>
+    <head>
+        Node Sample
+    <script>
+        function login() {
+            var login = {};
+            login.username = document.getElementById('username').value;
+            login.password = document.getElementById('password').value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "/login", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(JSON.stringify(login));
+            console.log(xhttp);
+        }
+    </script>
+    </head>
+   
+    <body>
+        <form name="LoginForm">
+            <div>
+            <label>User Name</label>
+            <input type="text" id="username" value="test">
+            </div>
+             <label>Password</label>
+            <input type="password" id="password" value="test">
+            <div>
+            </div>
+            <input type="button" onclick="login()" value="login"/> 
+        </form>
+    </body>
+</html>
